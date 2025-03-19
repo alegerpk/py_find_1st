@@ -32,6 +32,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install setuptools wheel
 
+    - name: Install package dependencies
+      run: |
+        pip install numpy
+        # If you have a requirements.txt, use the following line instead:
+        # pip install -r requirements.txt
+
     - name: Build wheel
       run: |
         python setup.py sdist bdist_wheel
